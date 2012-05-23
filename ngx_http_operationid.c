@@ -1,4 +1,4 @@
-/* 
+/*
  *  Copyright (c) 2009 Mathieu Poumeyrol ( http://github.com/kali )
  *
  *  All rights reserved.
@@ -215,7 +215,7 @@ ngx_http_operationid_add_variables(ngx_conf_t *cf)
 {
     ngx_http_variable_t  *var;
 
-    var = ngx_http_add_variable(cf, &ngx_http_operationid_variable_name, NGX_HTTP_VAR_NOHASH);
+    var = ngx_http_add_variable(cf, &ngx_http_operationid_variable_name, 0);
     if (var == NULL) {
         return NGX_ERROR;
     }
@@ -237,4 +237,3 @@ ngx_http_operationid_init_worker(ngx_cycle_t *cycle)
 
     return NGX_OK;
 }
-
